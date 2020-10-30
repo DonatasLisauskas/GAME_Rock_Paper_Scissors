@@ -3,7 +3,7 @@ public class Game extends PlayGame {
     @Override
     protected void gameLogic() {
         if (computer.getItemOfComputer.equals(player.getItemOfPlayer)) {
-            System.out.println("Equals! Computer: " + computer.getItemOfComputer + " || Player: " + player.getItemOfPlayer);
+            System.out.println("\u001B[35m" + "Equals! Computer: " + computer.getItemOfComputer + " || Player: " + player.getItemOfPlayer);
         }
         if (computer.getItemOfComputer.equals("ROCK") && player.getItemOfPlayer.equals("PAPER")) {
             playerScore.add(new Player());
@@ -36,27 +36,27 @@ public class Game extends PlayGame {
     @Override
     protected void whoWon() {
         if (super.computerScore.size() == playerScore.size()) {
-            System.out.println("The result is equal!");
+            System.out.println("\u001B[36m" + "The result is equal!");
         }
         if (super.computerScore.size() > playerScore.size()) {
-            System.out.println("The Computer won!");
+            System.out.println("\u001B[36m" + "The Computer won!");
         }
         if (super.computerScore.size() < playerScore.size()) {
-            System.out.println("Congrats, You won!");
+            System.out.println("\u001B[36m" + "Congrats, You won!");
         }
     }
 
     @Override
     protected void playGame() {
-       int round = 0;
-
-       while (round < 6) {
-           player.selectItem();
-           computer.selectItem();
-           gameLogic();
-           round ++;
-       }
+        int round = 0;
+        while (round < 6) {
+            player.selectItem();
+            computer.selectItem();
+            gameLogic();
+            if (player.checkInput()) {
+                round++;
+            }
+        }
         showResult();
     }
-
 }

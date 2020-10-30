@@ -9,28 +9,29 @@ public class Player extends ItemsAbstract {
 
     @Override
     public String selectItem() {
-        System.out.println("Enter ROCK or PAPER or SCISSORS");
-        showItems();
+        System.out.println("\u001B[34m" + "Enter ROCK or PAPER or SCISSORS");
+        scanner();
         checkInput();
         if (getItemOfPlayer != null) {
-            System.out.println(getItemOfPlayer);
+            System.out.println("\u001B[32m" + "You selected: " + getItemOfPlayer);
             return getItemOfPlayer;
         } else {
             return this.selectItem();
         }
     }
 
-    protected void checkInput() {
-        scanner();
+    protected Boolean checkInput() {
+        getItemOfPlayer = null;
         String regexp = "[rR][oO][cC][kK]|[pP][aA][pP][eE][rR]|[sS][cC][iI][sS][sS][oO][rR][sS]";
         boolean matchFound = input.matches(regexp);
         if (matchFound) {
-            System.out.println("Match found");
             getItemOfPlayer = itemList.stream()
                     .filter(find -> find.startsWith(input.toUpperCase()))
                     .collect(Collectors.joining());
+            return true;
         } else {
             System.out.println("Invalid value! Please enter ROCK or PAPER or SCISSORS");
+            return false;
         }
     }
 
@@ -42,10 +43,5 @@ public class Player extends ItemsAbstract {
             System.out.println("Invalid value ! Your value must be integer since 1 to 3 inclusive !");
             this.scanner();
         }
-    }
-
-    public static void main(String[] args) {
-        Player player = new Player();
-        player.selectItem();
     }
 }

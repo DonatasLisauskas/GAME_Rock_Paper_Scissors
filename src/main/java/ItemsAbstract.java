@@ -11,12 +11,5 @@ public abstract class ItemsAbstract {
         itemList.add("SCISSORS");
     }
 
-    protected void showItems() {
-        itemList.stream()
-                .map(i -> "|" + i + "| ")
-                .forEach(System.out::print);
-    }
-
-
     protected abstract String selectItem();
 }

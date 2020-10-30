@@ -9,15 +9,7 @@ public class Computer extends ItemsAbstract {
     public String selectItem() {
         int randomId = random.nextInt(itemList.size());
         getItemOfComputer = itemList.get(randomId);
-        System.out.println("Computer selected: " + getItemOfComputer);
+        System.out.println("\u001B[31m" + "Computer selected: " + getItemOfComputer);
         return getItemOfComputer;
-    }
-
-    public static void main(String[] args) {
-        Computer computer = new Computer();
-
-        computer.showItems();
-
-        System.out.println(computer.selectItem());
     }
 }
