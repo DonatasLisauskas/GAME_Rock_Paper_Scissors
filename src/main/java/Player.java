@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -36,12 +35,7 @@ public class Player extends ItemsAbstract {
     }
 
     private void scanner() {
-        try {
             Scanner scanner = new Scanner(System.in);
             input = scanner.nextLine();
-        } catch (InputMismatchException exception) {
-            System.out.println("Invalid value ! Your value must be integer since 1 to 3 inclusive !");
-            this.scanner();
-        }
     }
 }

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rock_paper_scissors" />
+        <module name="GAME_Rock_Paper_Scissors" />
       </profile>
     </annotationProcessing>
   </component>
