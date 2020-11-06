@@ -4,27 +4,27 @@ import java.util.stream.Collectors;
 public class Player extends ItemsAbstract {
 
     private String input;
-    protected String getItemOfPlayer;
+    protected String itemOfPlayer;
 
     @Override
     public String selectItem() {
         System.out.println("\u001B[34m" + "Enter ROCK or PAPER or SCISSORS");
         scanner();
         checkInput();
-        if (getItemOfPlayer != null) {
-            System.out.println("\u001B[32m" + "You selected: " + getItemOfPlayer);
-            return getItemOfPlayer;
+        if (itemOfPlayer != null) {
+            System.out.println("\u001B[32m" + "You selected: " + itemOfPlayer);
+            return itemOfPlayer;
         } else {
             return this.selectItem();
         }
     }
 
     protected Boolean checkInput() {
-        getItemOfPlayer = null;
+        itemOfPlayer = null;
         String regexp = "[rR][oO][cC][kK]|[pP][aA][pP][eE][rR]|[sS][cC][iI][sS][sS][oO][rR][sS]";
         boolean matchFound = input.matches(regexp);
         if (matchFound) {
-            getItemOfPlayer = itemList.stream()
+            itemOfPlayer = getItemList().stream()
                     .filter(find -> find.startsWith(input.toUpperCase()))
                     .collect(Collectors.joining());
             return true;
