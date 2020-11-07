@@ -1,9 +1,15 @@
+package Players;
+
 import java.util.Random;
 
 public class Computer extends ItemsAbstract {
 
     private final Random random = new Random();
-    protected String itemOfComputer;
+    private String itemOfComputer;
+
+    public String getItemOfComputer() {
+        return itemOfComputer;
+    }
 
     @Override
     public String selectItem() {

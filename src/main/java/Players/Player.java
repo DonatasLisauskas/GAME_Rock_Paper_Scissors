@@ -1,10 +1,16 @@
+package Players;
+
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Player extends ItemsAbstract {
 
     private String input;
-    protected String itemOfPlayer;
+    private String itemOfPlayer;
+
+    public String getItemOfPlayer() {
+        return itemOfPlayer;
+    }
 
     @Override
     public String selectItem() {
@@ -19,7 +25,7 @@ public class Player extends ItemsAbstract {
         }
     }
 
-    protected Boolean checkInput() {
+    public Boolean checkInput() {
         itemOfPlayer = null;
         String regexp = "[rR][oO][cC][kK]|[pP][aA][pP][eE][rR]|[sS][cC][iI][sS][sS][oO][rR][sS]";
         boolean matchFound = input.matches(regexp);

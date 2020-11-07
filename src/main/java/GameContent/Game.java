@@ -1,26 +1,32 @@
+package GameContent;
+
+import Players.Computer;
+import Players.Player;
+
 public class Game extends PlayGame {
 
     @Override
     protected void gameLogic() {
-        if (computer.itemOfComputer.equals(player.itemOfPlayer)) {
-            System.out.println("\u001B[35m" + "Equals! Computer: " + computer.itemOfComputer + " || Player: " + player.itemOfPlayer);
+        if (computer.getItemOfComputer().equals(player.getItemOfPlayer())) {
+            System.out.println("\u001B[35m" + "Equals! Computer: " + computer.getItemOfComputer() +
+                    " || Player: " + player.getItemOfPlayer());
         }
-        if (computer.itemOfComputer.equals("ROCK") && player.itemOfPlayer.equals("PAPER")) {
+        if (computer.getItemOfComputer().equals("ROCK") && player.getItemOfPlayer().equals("PAPER")) {
             playerScore.add(new Player());
         }
-        if (computer.itemOfComputer.equals("ROCK") && player.itemOfPlayer.equals("SCISSORS")) {
+        if (computer.getItemOfComputer().equals("ROCK") && player.getItemOfPlayer().equals("SCISSORS")) {
             computerScore.add(new Computer());
         }
-        if (computer.itemOfComputer.equals("SCISSORS") && player.itemOfPlayer.equals("ROCK")) {
+        if (computer.getItemOfComputer().equals("SCISSORS") && player.getItemOfPlayer().equals("ROCK")) {
             playerScore.add(new Player());
         }
-        if (computer.itemOfComputer.equals("SCISSORS") && player.itemOfPlayer.equals("PAPER")) {
+        if (computer.getItemOfComputer().equals("SCISSORS") && player.getItemOfPlayer().equals("PAPER")) {
             computerScore.add(new Computer());
         }
-        if (computer.itemOfComputer.equals("PAPER") && player.itemOfPlayer.equals("ROCK")) {
+        if (computer.getItemOfComputer().equals("PAPER") && player.getItemOfPlayer().equals("ROCK")) {
             computerScore.add(new Computer());
         }
-        if (computer.itemOfComputer.equals("PAPER") && player.itemOfPlayer.equals("SCISSORS")) {
+        if (computer.getItemOfComputer().equals("PAPER") && player.getItemOfPlayer().equals("SCISSORS")) {
             playerScore.add(new Player());
         }
     }
@@ -47,7 +53,7 @@ public class Game extends PlayGame {
     }
 
     @Override
-    protected void playGame() {
+    public void playGame() {
         int round = 0;
         while (round < 6) {
             player.selectItem();
