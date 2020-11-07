@@ -41,13 +41,13 @@ public class Game extends PlayGame {
 
     @Override
     protected void whoWon() {
-        if (super.computerScore.size() == playerScore.size()) {
+        if (computerScore.size() == playerScore.size()) {
             System.out.println("\u001B[36m" + "The result is equal!");
         }
-        if (super.computerScore.size() > playerScore.size()) {
+        if (computerScore.size() > playerScore.size()) {
             System.out.println("\u001B[36m" + "The Computer won!");
         }
-        if (super.computerScore.size() < playerScore.size()) {
+        if (computerScore.size() < playerScore.size()) {
             System.out.println("\u001B[36m" + "Congrats, You won!");
         }
     }
