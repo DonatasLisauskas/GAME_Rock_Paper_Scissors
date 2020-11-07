@@ -14,8 +14,16 @@ public abstract class PlayGame {
     @Autowired
     protected Player player;
 
-    protected final List<Computer> computerScore = new ArrayList<Computer>();
-    protected final List<Player> playerScore = new ArrayList<Player>();
+    private final List<Computer> computerScore = new ArrayList<Computer>();
+    private final List<Player> playerScore = new ArrayList<Player>();
+
+    public List<Computer> getComputerScore() {
+        return computerScore;
+    }
+
+    public List<Player> getPlayerScore() {
+        return playerScore;
+    }
 
     protected abstract void gameLogic();
 
