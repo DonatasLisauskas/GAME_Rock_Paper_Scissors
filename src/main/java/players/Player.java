@@ -3,7 +3,7 @@ package players;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class Player extends ItemsAbstract {
+public class Player extends Items {
 
     private String input;
     private String itemOfPlayer;

@@ -2,7 +2,7 @@ package players;
 
 import java.util.Random;
 
-public class Computer extends ItemsAbstract {
+public class Computer extends Items {
 
     private final Random random = new Random();
     private String itemOfComputer;
