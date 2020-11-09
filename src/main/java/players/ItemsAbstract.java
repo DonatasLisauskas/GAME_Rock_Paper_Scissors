@@ -1,11 +1,11 @@
-package Players;
+package players;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class ItemsAbstract {
 
-    private final List<String> itemList = new ArrayList<String>();
+    private final List<String> itemList = new ArrayList<>();
 
     protected ItemsAbstract() {
         itemList.add("ROCK");
