@@ -14,7 +14,7 @@ public class Computer extends Items {
     @Override
     public String selectItem() {
         int randomId = random.nextInt(getItemList().size());
-        itemOfComputer = getItemList().get(randomId);
+        itemOfComputer = getItemList().get(randomId).toString();
         System.out.println("\u001B[31m" + "Computer selected: " + itemOfComputer);
         return itemOfComputer;
     }
