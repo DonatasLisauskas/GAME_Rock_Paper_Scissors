@@ -16,23 +16,23 @@ public class Game extends PlayGame implements GameActions {
             System.out.println("\u001B[35m" + "Equals! " + opponents1.getClass().getName() + " and "
                     + opponents2.getClass().getName() + " selected: " + opponents1.getSelectedItem());
         }
-        if (opponents1.getSelectedItem().equals(GameItems.ROCK.toString()) && opponents2.getSelectedItem().equals(GameItems.PAPER.toString())) {
+        if (opponents1.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.ROCK)) && opponents2.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.PAPER))) {
+            opponents2Score.add(opponents2);
         }
-        opponents2Score.add(opponents2);
 
-        if (opponents1.getSelectedItem().equals(GameItems.PAPER.toString()) && opponents2.getSelectedItem().equals(GameItems.ROCK.toString())) {
+        if (opponents1.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.PAPER)) && opponents2.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.ROCK))) {
             opponents1Score.add(opponents1);
         }
-        if (opponents1.getSelectedItem().equals(GameItems.ROCK.toString()) && opponents2.getSelectedItem().equals(GameItems.SCISSORS.toString())) {
+        if (opponents1.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.ROCK)) && opponents2.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.SCISSORS))) {
             opponents1Score.add(opponents1);
         }
-        if (opponents1.getSelectedItem().equals(GameItems.SCISSORS.toString()) && opponents2.getSelectedItem().equals(GameItems.ROCK.toString())) {
+        if (opponents1.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.SCISSORS)) && opponents2.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.ROCK))) {
             opponents2Score.add(opponents2);
         }
-        if (opponents1.getSelectedItem().equals(GameItems.PAPER.toString()) && opponents2.getSelectedItem().equals(GameItems.SCISSORS.toString())) {
+        if (opponents1.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.PAPER)) && opponents2.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.SCISSORS))) {
             opponents2Score.add(opponents2);
         }
-        if (opponents1.getSelectedItem().equals(GameItems.SCISSORS.toString()) && opponents2.getSelectedItem().equals(GameItems.PAPER.toString())) {
+        if (opponents1.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.SCISSORS)) && opponents2.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.PAPER))) {
             opponents1Score.add(opponents1);
         }
     }
