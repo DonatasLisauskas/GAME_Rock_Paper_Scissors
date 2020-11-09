@@ -1,7 +1,7 @@
 package GameContent;
 
-import Players.Computer;
-import Players.Player;
+import players.Computer;
+import players.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -14,8 +14,8 @@ public abstract class PlayGame {
     @Autowired
     protected Player player;
 
-    private final List<Computer> computerScore = new ArrayList<Computer>();
-    private final List<Player> playerScore = new ArrayList<Player>();
+    private final List<Computer> computerScore = new ArrayList<>();
+    private final List<Player> playerScore = new ArrayList<>();
 
     public List<Computer> getComputerScore() {
         return computerScore;
