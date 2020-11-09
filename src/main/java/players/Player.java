@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 public class Player extends Items {
 
     private String input;
+
     private String itemOfPlayer;
 
     public String getItemOfPlayer() {
@@ -31,7 +32,8 @@ public class Player extends Items {
         boolean matchFound = input.matches(regexp);
         if (matchFound) {
             itemOfPlayer = getItemList().stream()
-                    .filter(find -> find.startsWith(input.toUpperCase()))
+                    .filter(find -> find.toString().equalsIgnoreCase(input))
+                    .map(Enum::toString)
                     .collect(Collectors.joining());
             return true;
         } else {
