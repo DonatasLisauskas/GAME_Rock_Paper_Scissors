@@ -1,7 +1,7 @@
 package spring_configurations;
 
-import GameContent.Game;
-import GameContent.PlayGame;
+import game_content.Game;
+import game_content.PlayGame;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

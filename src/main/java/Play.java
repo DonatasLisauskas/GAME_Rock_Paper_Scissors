@@ -1,5 +1,5 @@
-import GameContent.Game;
-import GameContent.PlayGame;
+import game_content.Game;
+import game_content.PlayGame;
 import spring_configurations.GameConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

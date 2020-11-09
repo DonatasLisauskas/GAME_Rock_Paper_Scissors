@@ -1,4 +1,4 @@
-package GameContent;
+package game_content;
 
 import players.Computer;
 import players.Player;
