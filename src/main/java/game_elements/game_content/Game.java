@@ -1,13 +1,14 @@
-package game_content;
+package game_elements.game_content;
 
-import enums.GameItems;
-import players.Opponents;
+import game_elements.enums.GameItems;
+import game_elements.players.Opponents;
+import game_elements.players.computer.ComputerPlayer;
+import game_elements.players.first_player.FirstPlayer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service("gameActions")
 public class Game extends PlayGame implements GameActions {
-
-    public Game(Opponents opponents1, Opponents opponents2) {
-        super(opponents1, opponents2);
-    }
 
     @Override
     public void gameLogic() {

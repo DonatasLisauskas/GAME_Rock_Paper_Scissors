@@ -1,4 +1,4 @@
-package players;
+package game_elements.players;
 
 public interface Opponents {
 

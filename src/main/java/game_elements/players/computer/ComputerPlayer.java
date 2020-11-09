@@ -1,11 +1,14 @@
-package players.computer;
+package game_elements.players.computer;
 
-import players.Items;
-import players.Opponents;
-import players.OpponentsActions;
+import game_elements.players.Items;
+import game_elements.players.Opponents;
+import game_elements.players.OpponentsActions;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.Random;
 
+@Repository("computerPlayer")
 public class ComputerPlayer extends Items implements Opponents{
 
     private String selectedItem;

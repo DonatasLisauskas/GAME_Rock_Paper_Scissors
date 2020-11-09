@@ -1,8 +1,11 @@
-package players;
+package game_elements.players;
+
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+@Component
 public class OpponentsActions extends Items implements Actions,Inputs {
 
     @Override

@@ -1,4 +1,4 @@
-package enums;
+package game_elements.enums;
 
 public enum GameItems {
 
