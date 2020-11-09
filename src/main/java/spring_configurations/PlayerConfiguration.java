@@ -1,8 +1,8 @@
-package SpringConfigurations;
+package spring_configurations;
 
-import Players.Computer;
-import Players.ItemsAbstract;
-import Players.Player;
+import players.Computer;
+import players.ItemsAbstract;
+import players.Player;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

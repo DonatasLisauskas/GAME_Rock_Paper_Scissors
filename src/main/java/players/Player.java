@@ -1,4 +1,4 @@
-package Players;
+package players;
 
 import java.util.Scanner;
 import java.util.stream.Collectors;

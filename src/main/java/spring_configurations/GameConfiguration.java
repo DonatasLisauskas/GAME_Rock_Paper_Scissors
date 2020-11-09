@@ -1,4 +1,4 @@
-package SpringConfigurations;
+package spring_configurations;
 
 import GameContent.Game;
 import GameContent.PlayGame;

@@ -1,7 +1,7 @@
 package GameContent;
 
-import Players.Computer;
-import Players.Player;
+import players.Computer;
+import players.Player;
 
 public class Game extends PlayGame {
 
