@@ -9,7 +9,7 @@ public class Play {
         PlayGame game = context.getBean(Game.class);
         game.playGame();*/
 
-        GameActions playGame = new Game( new ComputerPlayer(), new ComputerPlayer());
+        GameActions playGame = new Game( new FirstPlayer(), new ComputerPlayer());
         playGame.playGame();
     }
 }
