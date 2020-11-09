@@ -1,12 +1,12 @@
 import GameContent.Game;
 import GameContent.PlayGame;
-import Spring_Config.ConfigGame;
+import SpringConfigurations.GameConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Play {
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(ConfigGame.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(GameConfiguration.class);
         PlayGame game = context.getBean(Game.class);
         game.playGame();
     }
