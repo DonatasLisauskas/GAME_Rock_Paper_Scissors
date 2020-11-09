@@ -1,13 +1,15 @@
 import game_content.Game;
-import game_content.PlayGame;
-import spring_configurations.GameConfiguration;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import game_content.GameActions;
+import players.computer.ComputerPlayer;
+import players.first_player.FirstPlayer;
 
 public class Play {
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(GameConfiguration.class);
+      /*  ApplicationContext context = new AnnotationConfigApplicationContext(GameConfiguration.class);
         PlayGame game = context.getBean(Game.class);
-        game.playGame();
+        game.playGame();*/
+
+        GameActions playGame = new Game( new ComputerPlayer(), new ComputerPlayer());
+        playGame.playGame();
     }
 }

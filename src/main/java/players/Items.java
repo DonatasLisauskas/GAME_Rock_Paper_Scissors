@@ -17,5 +17,4 @@ public class Items {
     public List<GameItems> getItemList() {
         return itemList;
     }
-
 }

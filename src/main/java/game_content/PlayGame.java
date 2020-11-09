@@ -1,36 +1,29 @@
 package game_content;
 
-import players.ComputerPlayer;
-import players.UserPlayer;
+import players.Opponents;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class PlayGame {
+public class PlayGame {
+    protected Opponents opponents1;
+    protected Opponents opponents2;
+
+    protected final List<Opponents> opponents1Score = new ArrayList<>();
+    protected final List<Opponents> opponents2Score = new ArrayList<>();
 
     @Autowired
-    protected ComputerPlayer computer;
-    @Autowired
-    protected UserPlayer player;
-
-    private final List<ComputerPlayer> computerScore = new ArrayList<>();
-    private final List<UserPlayer> playerScore = new ArrayList<>();
-
-    public List<ComputerPlayer> getComputerScore() {
-        return computerScore;
+    public PlayGame(Opponents opponents1, Opponents opponents2) {
+        this.opponents1 = opponents1;
+        this.opponents2 = opponents2;
     }
 
-    public List<UserPlayer> getPlayerScore() {
-        return playerScore;
+    public List<Opponents> getOpponents1Score() {
+        return opponents1Score;
     }
 
-    protected abstract void gameLogic();
-
-    protected abstract void showResult();
-
-    protected abstract void whoWon();
-
-    public abstract void playGame();
-
+    public List<Opponents> getOpponents2Score() {
+        return opponents2Score;
+    }
 }

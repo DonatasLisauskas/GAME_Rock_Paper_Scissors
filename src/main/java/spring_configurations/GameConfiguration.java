@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Import;
 @Import(PlayerConfiguration.class)
 public class GameConfiguration {
 
-    @Bean
+   /* @Bean
     public PlayGame getPlayGameBean() {
         return new Game();
-    }
+    }*/
 
 }

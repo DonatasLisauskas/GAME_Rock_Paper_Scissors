@@ -1,54 +1,60 @@
 package game_content;
 
-import players.ComputerPlayer;
-import players.UserPlayer;
+import enums.GameItems;
+import players.Opponents;
 
-public class Game extends PlayGame {
+public class Game extends PlayGame implements GameActions {
 
-    @Override
-    protected void gameLogic() {
-        if (computer.getItemOfComputer().equals(player.getItemOfPlayer())) {
-            System.out.println("\u001B[35m" + "Equals! Computer: " + computer.getItemOfComputer() +
-                    " || Player: " + player.getItemOfPlayer());
-        }
-        if (computer.getItemOfComputer().equals("ROCK") && player.getItemOfPlayer().equals("PAPER")) {
-            getPlayerScore().add(new UserPlayer());
-        }
-        if (computer.getItemOfComputer().equals("ROCK") && player.getItemOfPlayer().equals("SCISSORS")) {
-            getComputerScore().add(new ComputerPlayer());
-        }
-        if (computer.getItemOfComputer().equals("SCISSORS") && player.getItemOfPlayer().equals("ROCK")) {
-            getPlayerScore().add(new UserPlayer());
-        }
-        if (computer.getItemOfComputer().equals("SCISSORS") && player.getItemOfPlayer().equals("PAPER")) {
-            getComputerScore().add(new ComputerPlayer());
-        }
-        if (computer.getItemOfComputer().equals("PAPER") && player.getItemOfPlayer().equals("ROCK")) {
-            getComputerScore().add(new ComputerPlayer());
-        }
-        if (computer.getItemOfComputer().equals("PAPER") && player.getItemOfPlayer().equals("SCISSORS")) {
-            getPlayerScore().add(new UserPlayer());
-        }
+    public Game(Opponents opponents1, Opponents opponents2) {
+        super(opponents1, opponents2);
     }
 
     @Override
-    protected void showResult() {
+    public void gameLogic() {
+        if (opponents1.getSelectedItem().equals(opponents2.getSelectedItem())) {
+            System.out.println("\u001B[35m" + "Equals! " + opponents1.getClass().getName() + " and "
+                    + opponents2.getClass().getName() + " selected: " + opponents1.getSelectedItem());
+        }
+        if (opponents1.getSelectedItem().equals(GameItems.ROCK.toString()) && opponents2.getSelectedItem().equals(GameItems.PAPER.toString())) {
+        }
+        opponents2Score.add(opponents2);
+
+        if (opponents1.getSelectedItem().equals(GameItems.PAPER.toString()) && opponents2.getSelectedItem().equals(GameItems.ROCK.toString())) {
+            opponents1Score.add(opponents1);
+        }
+        if (opponents1.getSelectedItem().equals(GameItems.ROCK.toString()) && opponents2.getSelectedItem().equals(GameItems.SCISSORS.toString())) {
+            opponents1Score.add(opponents1);
+        }
+        if (opponents1.getSelectedItem().equals(GameItems.SCISSORS.toString()) && opponents2.getSelectedItem().equals(GameItems.ROCK.toString())) {
+            opponents2Score.add(opponents2);
+        }
+        if (opponents1.getSelectedItem().equals(GameItems.PAPER.toString()) && opponents2.getSelectedItem().equals(GameItems.SCISSORS.toString())) {
+            opponents2Score.add(opponents2);
+        }
+        if (opponents1.getSelectedItem().equals(GameItems.SCISSORS.toString()) && opponents2.getSelectedItem().equals(GameItems.PAPER.toString())) {
+            opponents1Score.add(opponents1);
+        }
+    }
+
+
+    @Override
+    public void showResult() {
         whoWon();
-        System.out.println("Computer score: " + getComputerScore().size());
-        System.out.println("Player score: " + getPlayerScore().size());
+        System.out.println(opponents1.getClass().getName() + " score: " + getOpponents1Score().size());
+        System.out.println(opponents2.getClass().getName() + " score: " + getOpponents2Score().size());
 
     }
 
     @Override
-    protected void whoWon() {
-        if (getComputerScore().size() == getPlayerScore().size()) {
+    public void whoWon() {
+        if (getOpponents1Score().size() == getOpponents2Score().size()) {
             System.out.println("\u001B[36m" + "The result is equal!");
         }
-        if (getComputerScore().size() > getPlayerScore().size()) {
-            System.out.println("\u001B[36m" + "The Computer won!");
+        if (getOpponents1Score().size() > getOpponents2Score().size()) {
+            System.out.println("\u001B[36m" + "The " + opponents1.getClass().getName() + " won!");
         }
-        if (getComputerScore().size() < getPlayerScore().size()) {
-            System.out.println("\u001B[36m" + "Congrats, You won!");
+        if (getOpponents1Score().size() < getOpponents2Score().size()) {
+            System.out.println("\u001B[36m" + "The " + opponents2.getClass().getName() + " won!");
         }
     }
 
@@ -56,10 +62,10 @@ public class Game extends PlayGame {
     public void playGame() {
         int round = 0;
         while (round < 6) {
-            player.selectItem();
-            computer.selectItem();
+            opponents1.selectItem();
+            opponents2.selectItem();
             gameLogic();
-            if (player.checkInput()) {
+            if (opponents1.getOpponentsActions().checkInput(opponents1) || opponents2.getOpponentsActions().checkInput(opponents2)) {
                 round++;
             }
         }
