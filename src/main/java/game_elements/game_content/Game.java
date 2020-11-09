@@ -19,7 +19,6 @@ public class Game extends PlayGame implements GameActions {
         if (opponents1.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.ROCK)) && opponents2.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.PAPER))) {
             opponents2Score.add(opponents2);
         }
-
         if (opponents1.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.PAPER)) && opponents2.getSelectedItem().equalsIgnoreCase(String.valueOf(GameItems.ROCK))) {
             opponents1Score.add(opponents1);
         }
