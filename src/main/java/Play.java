@@ -1,7 +1,5 @@
 import game_elements.game_content.Game;
 import game_elements.game_content.GameActions;
-import game_elements.players.computer.ComputerPlayer;
-import game_elements.players.first_player.FirstPlayer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
