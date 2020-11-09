@@ -1,10 +1,6 @@
 package game_elements.game_content;
 
 import game_elements.enums.GameItems;
-import game_elements.players.Opponents;
-import game_elements.players.computer.ComputerPlayer;
-import game_elements.players.first_player.FirstPlayer;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("gameActions")
