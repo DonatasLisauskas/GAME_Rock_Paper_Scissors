@@ -1,4 +1,4 @@
-package players;
+package enums;
 
 public enum GameItems {
 
