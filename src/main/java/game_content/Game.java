@@ -1,7 +1,7 @@
 package game_content;
 
-import players.Computer;
-import players.Player;
+import players.ComputerPlayer;
+import players.UserPlayer;
 
 public class Game extends PlayGame {
 
@@ -12,22 +12,22 @@ public class Game extends PlayGame {
                     " || Player: " + player.getItemOfPlayer());
         }
         if (computer.getItemOfComputer().equals("ROCK") && player.getItemOfPlayer().equals("PAPER")) {
-            getPlayerScore().add(new Player());
+            getPlayerScore().add(new UserPlayer());
         }
         if (computer.getItemOfComputer().equals("ROCK") && player.getItemOfPlayer().equals("SCISSORS")) {
-            getComputerScore().add(new Computer());
+            getComputerScore().add(new ComputerPlayer());
         }
         if (computer.getItemOfComputer().equals("SCISSORS") && player.getItemOfPlayer().equals("ROCK")) {
-            getPlayerScore().add(new Player());
+            getPlayerScore().add(new UserPlayer());
         }
         if (computer.getItemOfComputer().equals("SCISSORS") && player.getItemOfPlayer().equals("PAPER")) {
-            getComputerScore().add(new Computer());
+            getComputerScore().add(new ComputerPlayer());
         }
         if (computer.getItemOfComputer().equals("PAPER") && player.getItemOfPlayer().equals("ROCK")) {
-            getComputerScore().add(new Computer());
+            getComputerScore().add(new ComputerPlayer());
         }
         if (computer.getItemOfComputer().equals("PAPER") && player.getItemOfPlayer().equals("SCISSORS")) {
-            getPlayerScore().add(new Player());
+            getPlayerScore().add(new UserPlayer());
         }
     }
 

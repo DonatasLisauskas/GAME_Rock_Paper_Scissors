@@ -1,8 +1,8 @@
 package spring_configurations;
 
-import players.Computer;
-import players.Items;
-import players.Player;
+import players.ComputerPlayer;
+import players.Players;
+import players.UserPlayer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,13 +10,13 @@ import org.springframework.context.annotation.Configuration;
 public class PlayerConfiguration {
 
     @Bean
-    public Items getPlayerBean() {
-        return new Player();
+    public Players getPlayerBean() {
+        return new UserPlayer();
     }
 
     @Bean
-    public Items getComputerPlayerBean() {
-        return new Computer();
+    public Players getComputerPlayerBean() {
+        return new ComputerPlayer();
     }
 
 }

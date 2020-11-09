@@ -3,7 +3,7 @@ package players;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class Player extends Items {
+public class UserPlayer extends Players {
 
     private String input;
 
@@ -28,7 +28,7 @@ public class Player extends Items {
 
     public Boolean checkInput() {
         itemOfPlayer = null;
-        String regexp = "[rR][oO][cC][kK]|[pP][aA][pP][eE][rR]|[sS][cC][iI][sS][sS][oO][rR][sS]";
+        String regexp = "[rR][oO][cC][kK]+|[pP][aA][pP][eE][rR]|[sS][cC][iI][sS][sS][oO][rR][sS]";
         boolean matchFound = input.matches(regexp);
         if (matchFound) {
             itemOfPlayer = getItemList().stream()

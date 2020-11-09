@@ -1,7 +1,7 @@
 package game_content;
 
-import players.Computer;
-import players.Player;
+import players.ComputerPlayer;
+import players.UserPlayer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -10,18 +10,18 @@ import java.util.List;
 public abstract class PlayGame {
 
     @Autowired
-    protected Computer computer;
+    protected ComputerPlayer computer;
     @Autowired
-    protected Player player;
+    protected UserPlayer player;
 
-    private final List<Computer> computerScore = new ArrayList<>();
-    private final List<Player> playerScore = new ArrayList<>();
+    private final List<ComputerPlayer> computerScore = new ArrayList<>();
+    private final List<UserPlayer> playerScore = new ArrayList<>();
 
-    public List<Computer> getComputerScore() {
+    public List<ComputerPlayer> getComputerScore() {
         return computerScore;
     }
 
-    public List<Player> getPlayerScore() {
+    public List<UserPlayer> getPlayerScore() {
         return playerScore;
     }
 
