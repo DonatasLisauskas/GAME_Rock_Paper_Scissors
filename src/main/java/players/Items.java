@@ -5,11 +5,11 @@ import enums.GameItems;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Players {
+public class Items {
 
     private final List<GameItems> itemList = new ArrayList<>();
 
-    protected Players() {
+    protected Items() {
         itemList.add(GameItems.ROCK);
         itemList.add(GameItems.PAPER);
         itemList.add(GameItems.SCISSORS);
@@ -19,5 +19,4 @@ public abstract class Players {
         return itemList;
     }
 
-    protected abstract String selectItem();
 }
