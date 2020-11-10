@@ -2,11 +2,11 @@ package game_elements.services;
 
 import game_elements.entities.GameActions;
 import game_elements.enums.GameItems;
-import game_elements.components.PlayGame;
+import game_elements.components.PlayersConfiguration;
 import org.springframework.stereotype.Service;
 
 @Service("gameActions")
-public class GameService extends PlayGame implements GameActions {
+public class GameService extends PlayersConfiguration implements GameActions {
 
     @Override
     public void gameLogic() {
