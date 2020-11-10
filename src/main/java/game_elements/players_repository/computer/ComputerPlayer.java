@@ -2,7 +2,7 @@ package game_elements.players_repository.computer;
 
 import game_elements.components.Items;
 import game_elements.entities.Opponents;
-import game_elements.players_repository.OpponentsActions;
+import game_elements.components.OpponentsActions;
 import org.springframework.stereotype.Repository;
 
 import java.util.Random;

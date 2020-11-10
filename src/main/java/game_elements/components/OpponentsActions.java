@@ -1,4 +1,4 @@
-package game_elements.players_repository;
+package game_elements.components;
 
 import game_elements.components.Items;
 import game_elements.entities.Actions;

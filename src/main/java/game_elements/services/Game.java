@@ -2,7 +2,7 @@ package game_elements.services;
 
 import game_elements.entities.GameActions;
 import game_elements.enums.GameItems;
-import game_elements.game_content.PlayGame;
+import game_elements.components.PlayGame;
 import org.springframework.stereotype.Service;
 
 @Service("gameActions")

@@ -1,4 +1,4 @@
-package game_elements.game_content;
+package game_elements.components;
 
 import game_elements.players_repository.computer.ComputerPlayer;
 import game_elements.players_repository.first_player.FirstPlayer;
