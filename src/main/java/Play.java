@@ -1,5 +1,5 @@
 import game_elements.game_content.Game;
-import game_elements.game_content.GameActions;
+import game_elements.entities.GameActions;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

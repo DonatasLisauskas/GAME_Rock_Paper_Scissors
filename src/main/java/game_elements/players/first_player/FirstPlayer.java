@@ -1,6 +1,6 @@
 package game_elements.players.first_player;
 
-import game_elements.players.Opponents;
+import game_elements.entities.Opponents;
 import game_elements.players.OpponentsActions;
 import org.springframework.stereotype.Repository;
 
