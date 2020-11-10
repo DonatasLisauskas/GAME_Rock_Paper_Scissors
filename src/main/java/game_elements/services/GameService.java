@@ -14,9 +14,8 @@ public class GameService extends PlayersConfiguration implements GameActions {
 
 
     // OR BY THIS WAY
-   /* public GameService(@Qualifier("firstPlayer")Opponents opponents1,@Qualifier("computerPlayer") Opponents opponents2) {
+    /*public GameService(@Qualifier("firstPlayer")Opponents opponents1,@Qualifier("computerPlayer") Opponents opponents2) {
         super(opponents1, opponents2);
-    }
     }*/
 
     @Override

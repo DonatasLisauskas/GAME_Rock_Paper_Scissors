@@ -5,7 +5,7 @@ import game_elements.components.OpponentsActions;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-@Component(value = "firstPlayer")
+@Repository(value = "firstPlayer")
 public class FirstPlayer implements Opponents {
 
     private String selectedItem;

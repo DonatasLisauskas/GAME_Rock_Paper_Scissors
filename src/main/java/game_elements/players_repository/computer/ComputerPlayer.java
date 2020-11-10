@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Random;
 
-@Component(value = "computerPlayer")
+@Repository(value = "computerPlayer")
 public class ComputerPlayer extends Items implements Opponents{
 
     private String selectedItem;
