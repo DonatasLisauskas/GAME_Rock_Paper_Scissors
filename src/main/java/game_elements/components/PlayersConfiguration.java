@@ -22,10 +22,9 @@ public class PlayersConfiguration {
 
 
     // OR BY THIS WAY
-/*
-    protected Opponents opponents1;
+    /*protected Opponents opponents1;
     protected Opponents opponents2;
-    public PlayersConfiguration(@Qualifier("firstPlayer") FirstPlayer opponents1, @Qualifier("computerPlayer") ComputerPlayer opponents2) {
+    public PlayersConfiguration(@Qualifier("firstPlayer") Opponents opponents1, @Qualifier("computerPlayer") Opponents opponents2) {
         this.opponents1 = opponents1;
         this.opponents2 = opponents2;
     }*/

@@ -2,9 +2,10 @@ package game_elements.players_repository.first_player;
 
 import game_elements.entities.Opponents;
 import game_elements.components.OpponentsActions;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-@Repository("firstPlayer")
+@Component(value = "firstPlayer")
 public class FirstPlayer implements Opponents {
 
     private String selectedItem;

@@ -3,11 +3,12 @@ package game_elements.players_repository.computer;
 import game_elements.components.Items;
 import game_elements.entities.Opponents;
 import game_elements.components.OpponentsActions;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.Random;
 
-@Repository("computerPlayer")
+@Component(value = "computerPlayer")
 public class ComputerPlayer extends Items implements Opponents{
 
     private String selectedItem;
