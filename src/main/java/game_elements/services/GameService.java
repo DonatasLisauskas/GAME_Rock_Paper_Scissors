@@ -6,7 +6,7 @@ import game_elements.components.PlayGame;
 import org.springframework.stereotype.Service;
 
 @Service("gameActions")
-public class Game extends PlayGame implements GameActions {
+public class GameService extends PlayGame implements GameActions {
 
     @Override
     public void gameLogic() {
