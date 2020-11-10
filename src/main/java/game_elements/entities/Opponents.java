@@ -1,6 +1,6 @@
 package game_elements.entities;
 
-import game_elements.players.OpponentsActions;
+import game_elements.players_repository.OpponentsActions;
 
 public interface Opponents {
 

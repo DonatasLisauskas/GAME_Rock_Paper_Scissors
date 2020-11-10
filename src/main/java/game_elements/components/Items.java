@@ -1,4 +1,4 @@
-package game_elements.players;
+package game_elements.components;
 
 import game_elements.enums.GameItems;
 import org.springframework.stereotype.Component;

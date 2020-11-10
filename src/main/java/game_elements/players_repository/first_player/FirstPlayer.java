@@ -1,18 +1,15 @@
-package game_elements.players.computer;
+package game_elements.players_repository.first_player;
 
-import game_elements.players.Items;
 import game_elements.entities.Opponents;
-import game_elements.players.OpponentsActions;
+import game_elements.players_repository.OpponentsActions;
 import org.springframework.stereotype.Repository;
 
-import java.util.Random;
-
-@Repository("computerPlayer")
-public class ComputerPlayer extends Items implements Opponents{
+@Repository("firstPlayer")
+public class FirstPlayer implements Opponents {
 
     private String selectedItem;
 
-    private final Random random = new Random();
+    protected String input;
 
     @Override
     public String getSelectedItem() {
@@ -26,24 +23,22 @@ public class ComputerPlayer extends Items implements Opponents{
 
     @Override
     public String getInput() {
-        return null;
+        return input;
     }
 
     @Override
     public void setInput(String input) {
-
+        this.input=input;
     }
 
     @Override
     public void selectItem() {
-        int randomId = random.nextInt(getItemList().size());
-        String item = getItemList().get(randomId).toString();
-        setSelectedItem(item);
-        System.out.println("\u001B[31m" + "Computer selected: " + item);
+        getOpponentsActions().setOpponentItem(this);
     }
 
     @Override
     public OpponentsActions getOpponentsActions() {
         return new OpponentsActions();
     }
+
 }

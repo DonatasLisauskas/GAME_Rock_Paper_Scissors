@@ -1,7 +1,7 @@
 package game_elements.game_content;
 
-import game_elements.players.computer.ComputerPlayer;
-import game_elements.players.first_player.FirstPlayer;
+import game_elements.players_repository.computer.ComputerPlayer;
+import game_elements.players_repository.first_player.FirstPlayer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
