@@ -1,4 +1,4 @@
-package game_elements.players;
+package game_elements.entities;
 
 public interface Inputs {
 

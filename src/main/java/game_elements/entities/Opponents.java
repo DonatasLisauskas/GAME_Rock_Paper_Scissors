@@ -1,4 +1,6 @@
-package game_elements.players;
+package game_elements.entities;
+
+import game_elements.players.OpponentsActions;
 
 public interface Opponents {
 

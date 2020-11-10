@@ -1,4 +1,4 @@
-package game_elements.game_content;
+package game_elements.entities;
 
 public interface GameActions{
 
