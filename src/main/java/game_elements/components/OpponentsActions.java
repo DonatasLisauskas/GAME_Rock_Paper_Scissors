@@ -1,6 +1,5 @@
 package game_elements.components;
 
-import game_elements.components.Items;
 import game_elements.entities.Actions;
 import game_elements.entities.Opponents;
 import org.springframework.stereotype.Component;
