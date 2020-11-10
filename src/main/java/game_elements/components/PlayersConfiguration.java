@@ -1,5 +1,6 @@
 package game_elements.components;
 
+import game_elements.entities.Opponents;
 import game_elements.players_repository.computer.ComputerPlayer;
 import game_elements.players_repository.first_player.FirstPlayer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,19 +15,29 @@ public class PlayersConfiguration {
 
     @Autowired
     @Qualifier("firstPlayer")
-    protected FirstPlayer opponents1;
+    protected Opponents opponents1;
     @Autowired
     @Qualifier("computerPlayer")
-    protected ComputerPlayer opponents2;
+    protected Opponents opponents2;
 
-    protected final List<FirstPlayer> opponents1Score = new ArrayList<>();
-    protected final List<ComputerPlayer> opponents2Score = new ArrayList<>();
 
-    public List<FirstPlayer> getOpponents1Score() {
+    // OR BY THIS WAY
+/*
+    protected Opponents opponents1;
+    protected Opponents opponents2;
+    public PlayersConfiguration(@Qualifier("firstPlayer") FirstPlayer opponents1, @Qualifier("computerPlayer") ComputerPlayer opponents2) {
+        this.opponents1 = opponents1;
+        this.opponents2 = opponents2;
+    }*/
+
+    protected final List<Opponents> opponents1Score = new ArrayList<>();
+    protected final List<Opponents> opponents2Score = new ArrayList<>();
+
+    public List<Opponents> getOpponents1Score() {
         return opponents1Score;
     }
 
-    public List<ComputerPlayer> getOpponents2Score() {
+    public List<Opponents> getOpponents2Score() {
         return opponents2Score;
     }
 }

@@ -1,12 +1,20 @@
 package game_elements.services;
 
 import game_elements.entities.GameActions;
+import game_elements.entities.Opponents;
 import game_elements.enums.GameItems;
 import game_elements.components.PlayersConfiguration;
+import game_elements.players_repository.computer.ComputerPlayer;
+import game_elements.players_repository.first_player.FirstPlayer;
 import org.springframework.stereotype.Service;
 
 @Service("gameActions")
 public class GameService extends PlayersConfiguration implements GameActions {
+
+    // OR BY THIS WAY
+   /* public GameService(FirstPlayer opponents1, ComputerPlayer opponents2) {
+        super(opponents1, opponents2);
+    }*/
 
     @Override
     public void gameLogic() {
