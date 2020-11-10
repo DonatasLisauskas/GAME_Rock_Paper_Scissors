@@ -74,15 +74,20 @@ public class GameService extends PlayersConfiguration implements GameActions {
 
     @Override
     public void playGame() {
-        int round = 0;
-        while (round < 6) {
-            opponents1.selectItem();
-            opponents2.selectItem();
-            gameLogic();
-            if (opponents1.getOpponentsActions().checkInput(opponents1) || opponents2.getOpponentsActions().checkInput(opponents2)) {
-                round++;
+        try {
+            int round = 0;
+            while (round < 6) {
+                opponents1.selectItem();
+                opponents2.selectItem();
+                gameLogic();
+                if (opponents1.getOpponentsActions().checkInput(opponents1) || opponents2.getOpponentsActions().checkInput(opponents2)) {
+                    round++;
+                }
             }
+            showResult();
+        } catch (NullPointerException exception) {
+            System.out.println(exception);
+            System.out.println("\u001B[31m" + "EXCEPTION: " + exception + " //   The computer cannot play vs itself! Please change the opponent on the @Qualifier(\"\") tag in the PlayersConfiguration.java file.");
         }
-        showResult();
     }
 }

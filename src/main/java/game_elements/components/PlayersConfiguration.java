@@ -5,7 +5,9 @@ import game_elements.players_repository.computer.ComputerPlayer;
 import game_elements.players_repository.first_player.FirstPlayer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,7 @@ import java.util.List;
 public class PlayersConfiguration {
 
     @Autowired
-    @Qualifier("firstPlayer")
+    @Qualifier("computerPlayer")
     protected Opponents opponents1;
     @Autowired
     @Qualifier("computerPlayer")
