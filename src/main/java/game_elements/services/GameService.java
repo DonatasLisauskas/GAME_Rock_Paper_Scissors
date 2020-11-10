@@ -86,7 +86,6 @@ public class GameService extends PlayersConfiguration implements GameActions {
             }
             showResult();
         } catch (NullPointerException exception) {
-            System.out.println(exception);
             System.out.println("\u001B[31m" + "EXCEPTION: " + exception + " //   The computer cannot play vs itself! Please change the opponent on the @Qualifier(\"\") tag in the PlayersConfiguration.java file.");
         }
     }
