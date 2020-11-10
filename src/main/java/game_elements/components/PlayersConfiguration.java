@@ -16,7 +16,7 @@ import java.util.List;
 public class PlayersConfiguration {
 
     @Autowired
-    @Qualifier("computerPlayer")
+    @Qualifier("firstPlayer")
     protected Opponents opponents1;
     @Autowired
     @Qualifier("computerPlayer")
